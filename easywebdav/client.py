@@ -101,7 +101,8 @@ class Client(object):
         return response
 
     def _get_url(self, path):
-        path = str(path).strip()
+        #path = str(path).strip()
+        path=path.strip()
         if path.startswith('/'):
             return self.baseurl + path
         return "".join((self.baseurl, self.cwd, path))
